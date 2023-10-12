@@ -14,7 +14,15 @@ Enter 'exit' to quit the program.
 
 Dependencies:
 Python 3
-requests library (install using pip install requests)
+COPY AND PASTE THE FOLLOWING INTO WINDOWS COMMAND PROMPT
+YOU MUST INSTALL THESE FOR IT TO WORK, MUST HAVE PYTHON INSTALLED
+
+  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  pip install requests
+  pip install pytz
+  pip install datetime
+
+
 
 Note:
 Ensure you have an internet connection.
