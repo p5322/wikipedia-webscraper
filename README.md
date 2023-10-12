@@ -13,9 +13,11 @@ The script will display clickable links in Markdown format for the relevant arti
 Enter 'exit' to quit the program.
 
 **Dependencies:
-Python 3
-COPY AND PASTE THE FOLLOWING INTO WINDOWS COMMAND PROMPT
-YOU MUST INSTALL THESE FOR IT TO WORK, MUST HAVE PYTHON INSTALLED
+
+- Python 3
+
+- COPY AND PASTE THE FOLLOWING INTO WINDOWS COMMAND PROMPT
+- YOU MUST INSTALL THESE FOR IT TO WORK, MUST HAVE PYTHON INSTALLED
 
   
 - (curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py)
