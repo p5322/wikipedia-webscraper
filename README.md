@@ -12,21 +12,20 @@ Enter your query to search Wikipedia.
 The script will display clickable links in Markdown format for the relevant articles.
 Enter 'exit' to quit the program.
 
-**Dependencies:
+Dependencies:
 
 - Python 3
 
-- COPY AND PASTE THE FOLLOWING INTO WINDOWS COMMAND PROMPT
 - YOU MUST INSTALL THESE FOR IT TO WORK, MUST HAVE PYTHON INSTALLED
+- COPY AND PASTE THE FOLLOWING INTO WINDOWS COMMAND PROMPT
 
-  
 - (curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py)
   
 - pip install requests
   
 - pip install pytz
   
-- pip install datetime**
+- pip install datetime
 
 
 
