@@ -21,6 +21,7 @@ Ensure you have an internet connection.
 Respect Wikipedia's terms of use when using this tool.
 
 Image:
+
 ![image](https://github.com/p5322/wikipedia-webscraper/assets/147680302/8ff2ba9b-648a-4e0d-8a11-25da7bb80fc3)
 
 Author:
