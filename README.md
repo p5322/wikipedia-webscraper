@@ -4,8 +4,7 @@ Description:
 
 This Python script allows you to search Wikipedia for articles using user-provided queries. It retrieves a list of articles related to the query and generates plain text links in Markdown format for easy access.
 
-HIGHLY USEFUL FOR RESEARCH PROJECTS
-NOW PROVIDES CITATIONS FOR THE WIKI LINKS
+HIGHLY USEFUL FOR RESEARCH PROJECTS; NOW PROVIDES CITATIONS FOR THE WIKI LINKS
 
 How to Use:
 Run the script.
