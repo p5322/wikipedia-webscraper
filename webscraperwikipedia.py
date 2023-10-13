@@ -1,22 +1,39 @@
 import requests
+import pytz
+from datetime import datetime
 
 
-def generate_wikipedia_url(title: str, lang: str = "en") -> str:
+def generate_mla_citation(title: str, lang: str = "en") -> str:
     """
-    Generate a Wikipedia URL for a given title and language.
+    Generate a mla citation for a given title and language.
 
     :param title: The title of the Wikipedia article.
     :param lang: The language for Wikipedia. Default is 'en' (English).
-    :return: a string [title](wikipedia_url)\n.
+    :return: a mla_citation string with url
     """
-    return f"{title}](https://{lang}.wikipedia.org/wiki/{title.replace(' ', '_')}\n"
+    author = "Wikipedia Contributors"
+    article_title = title
+    site_title = "Wikipedia"
+
+    # Get the user's local timezone
+    user_timezone = pytz.timezone('America/New_York')  # Change this to the user's actual timezone
+
+    # Get the current time in the user's timezone
+    current_time = datetime.now(user_timezone)
+
+    # Format the access date
+    access_date = current_time.strftime('%d %B %Y')  # Example format: 11 October 2023
+    url = f"https://{lang}.wikipedia.org/wiki/{title.replace(' ', '_')}"
+
+    citation = f"\n{author}. \"{article_title}.\" {site_title}. {access_date}.\n{url}\n"
+    return citation
 
 
-def search_wikipedia(request: str, lang: str = "en") -> str:
+def search_wikipedia(query: str, lang: str = "en") -> str:
     """
     Search Wikipedia for a given query.
 
-    :param request: The search query.
+    :param query: The search query.
     :param lang: The language for Wikipedia. Default is 'en' (English).
     :return: A string containing Markdown links to search results.
     """
@@ -27,7 +44,7 @@ def search_wikipedia(request: str, lang: str = "en") -> str:
         "action": "query",
         "format": "json",
         "list": "search",
-        "srsearch": request
+        "srsearch": query
     }
 
     # Send an HTTP GET request to the Wikipedia search API
@@ -40,16 +57,15 @@ def search_wikipedia(request: str, lang: str = "en") -> str:
 
     # Get the search results
     search_results = data["query"]["search"]
-    markdown_links = []
 
     # Check if there is no result found
     if not search_results:
         return "No search results found."
 
-    # Generate the link for the article in Markdown format
-    markdown_links = [f"[{generate_wikipedia_url(result['title'], lang)}" for result in search_results]
+    # Generate the mla_citation for the article
+    mla_citation = [f"{generate_mla_citation(result['title'], lang)}" for result in search_results]
 
-    return "".join(markdown_links)
+    return "".join(mla_citation)
 
 
 def main():
@@ -59,11 +75,10 @@ def main():
         if query == 'exit':
             break
 
-        res = search_wikipedia(query)
+        res = search_wikipedia(query=query)
         print(res)
 
 
 if __name__ == "__main__":
 
     main()
-

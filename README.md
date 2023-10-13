@@ -4,7 +4,7 @@ Description:
 
 This Python script allows you to search Wikipedia for articles using user-provided queries. It retrieves a list of articles related to the query and generates plain text links in Markdown format for easy access.
 
-HIGHLY USEFUL FOR RESEARCH PROJECTS
+HIGHLY USEFUL FOR RESEARCH PROJECTS; NOW PROVIDES CITATIONS FOR THE WIKI LINKS
 
 How to Use:
 Run the script.
@@ -13,15 +13,30 @@ The script will display clickable links in Markdown format for the relevant arti
 Enter 'exit' to quit the program.
 
 Dependencies:
-Python 3
-requests library (install using pip install requests)
+
+- Python 3
+
+- YOU MUST INSTALL THESE FOR IT TO WORK, MUST HAVE PYTHON INSTALLED
+- COPY AND PASTE THE FOLLOWING INTO WINDOWS COMMAND PROMPT
+
+- (curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py)
+  
+- pip install requests
+  
+- pip install pytz
+  
+- pip install datetime
+
+
+
 
 Note:
 Ensure you have an internet connection.
 Respect Wikipedia's terms of use when using this tool.
 
-Going Foward:
-I plan to add a feature in which MLA citations are provided along with the links. this make the webscraper optimal for research projects. 
+Image:
+
+![image](https://github.com/p5322/wikipedia-webscraper/assets/147680302/8ff2ba9b-648a-4e0d-8a11-25da7bb80fc3)
 
 Author:
 p5322
